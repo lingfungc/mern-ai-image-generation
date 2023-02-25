@@ -12,6 +12,7 @@ const FormField = ({
 }) => {
   return (
     <div>
+      {/* Form Label - First Row */}
       <div className="flex item-center gap-2 mb-2">
         <label
           htmlFor={name}
@@ -32,6 +33,7 @@ const FormField = ({
         )}
       </div>
 
+      {/* Form Input - Second Row */}
       <input
         type={type}
         id={name}
