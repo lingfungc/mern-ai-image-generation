@@ -47,9 +47,32 @@ const CreatePost = () => {
             placeholder="A plush toy robot sitting against a yellow wall"
             value={form.prompt}
             handleChange={handleChange}
+            // * This "isSurpriseMe" is a Random Prompt Generator
             isSurpriseMe
             handleSurpriseMe={handleSurpriseMe}
           />
+
+          <div className="relative bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-64 p-3 h-64 flex justify-center items-center">
+            {form.photo ? (
+              <img
+                src={form.photo}
+                alt={form.prompt}
+                className="w-full h-full object-contain"
+              />
+            ) : (
+              <img
+                src={preview}
+                alt="preview"
+                className="w-9/12 h-9/12 object-contain opacity-40"
+              />
+            )}
+
+            {generatingImg && (
+              <div className="absolute inset-0 z-0 flex justify-center items-center bg-[rgba(0,0,0,0.5)]">
+                <Loader />
+              </div>
+            )}
+          </div>
         </div>
       </form>
     </section>
