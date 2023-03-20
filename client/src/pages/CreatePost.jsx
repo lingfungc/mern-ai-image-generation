@@ -17,8 +17,8 @@ const CreatePost = () => {
         setGeneratingImg(true);
 
         const response = await fetch(
-          "http://localhost:8080/api/v1/dalle",
-          // "https://lfc-ai-gallery.onrender.com/api/v1/dalle",
+          // "http://localhost:8080/api/v1/dalle",
+          "https://lfc-ai-gallery.onrender.com/api/v1/dalle",
           {
             method: "POST",
             headers: {
@@ -51,8 +51,8 @@ const CreatePost = () => {
 
       try {
         const response = await fetch(
-          "http://localhost:8080/api/v1/post",
-          // "https://lfc-ai-gallery.onrender.com/api/v1/post",
+          // "http://localhost:8080/api/v1/post",
+          "https://lfc-ai-gallery.onrender.com/api/v1/post",
           {
             method: "POST",
             headers: {
