@@ -12,16 +12,16 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors());
+// app.use(cors());
 
-// const corsOptions = { origin: "https://lfc-ai-gallery.netlify.app/" };
+// const corsOptions = { origin: "https://lfc-ai-gallery.netlify.app" };
 // app.use(cors(corsOptions));
 
-// app.use(
-//   cors({
-//     origin: "https://lfc-ai-gallery.netlify.app",
-//   })
-// );
+app.use(
+  cors({
+    origin: "https://lfc-ai-gallery.netlify.app",
+  })
+);
 
 // app.use(
 //   cors({
