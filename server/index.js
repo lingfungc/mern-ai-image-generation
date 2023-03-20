@@ -12,8 +12,25 @@ dotenv.config();
 
 const app = express();
 
-const corsOptions = { origin: "https://lfc-ai-gallery.netlify.app/" };
-app.use(cors(corsOptions));
+app.use(cors());
+
+// const corsOptions = { origin: "https://lfc-ai-gallery.netlify.app/" };
+// app.use(cors(corsOptions));
+
+// app.use(
+//   cors({
+//     origin: "https://lfc-ai-gallery.netlify.app",
+//   })
+// );
+
+// app.use(
+//   cors({
+//     origin: "*",
+//     methods: ["GET", "POST", "PUT", "DELETE"],
+//     allowedHeaders: ["Content-Type", "Authorization"],
+//     exposedHeaders: ["Content-Length", "X-Foo", "X-Bar"],
+//   })
+// );
 
 app.use(express.json({ limit: "50mb" }));
 
