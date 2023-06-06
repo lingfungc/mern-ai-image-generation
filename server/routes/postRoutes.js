@@ -25,6 +25,17 @@ router.route("/").get(async (req, res) => {
   }
 });
 
+// * Get One Post
+router.route("/posts/:id").get(async (req, res) => {
+  try {
+    const post = await Post.findById(req.params.id);
+
+    res.status(200).json({ success: true, data: post });
+  } catch (error) {
+    res.status(500).json({ success: true, message: error });
+  }
+});
+
 // * Create a Post
 router.route("/").post(async (req, res) => {
   try {
